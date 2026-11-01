@@ -11,14 +11,14 @@ from PIL import Image, ImageDraw
 WHITE, SOFT = (255, 255, 255, 255), (255, 255, 255, 150)
 
 
-def side_rail(d, p, labels, x_center, y_bottom):
+def side_rail(d, p, labels, x_center, y_bottom, step=150):
     f = Z.get_font(30, bold=False)
     y = y_bottom
     for lab in reversed(labels):
         d.ellipse((x_center - 36, y - 72, x_center + 36, y), fill=(0, 0, 0, 110), outline=WHITE, width=3)
         w = d.textlength(lab, font=f)
         d.text((x_center - w / 2, y + 8), lab, font=f, fill=WHITE)
-        y -= 150
+        y -= step
 
 
 def caption_block(d, p, user, caption, y):
@@ -44,8 +44,8 @@ def vertical_ui(img, p, a):
     else:
         title = {"reel": "Reels", "tiktok": "Following   For You"}.get(ui, "Shorts")
         d.text((40, 80), title, font=Z.get_font(50), fill=WHITE)
-        side_rail(d, p, ["12K", "340", "Share", "Save"][: 4], W - 90, H - 560 if ui != "reel" else H - 380)
-        caption_block(d, p, a.user, a.caption, H - 330 if ui == "reel" else H - 470)
+        side_rail(d, p, ["12K", "340", "Share", "Save"], W - 90, H - 560 if ui != "reel" else H - 280, 150 if ui != "reel" else 130)
+        caption_block(d, p, a.user, a.caption, H - 230 if ui == "reel" else H - 470)
     return Image.alpha_composite(img, layer)
 
 
