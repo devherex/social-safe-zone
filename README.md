@@ -27,7 +27,7 @@ A Claude skill + toolkit that keeps every text, logo and CTA inside the safe zon
 
 **Claude Code / Claude skills folder**
 ```bash
-git clone https://github.com/<your-username>/social-safe-zone ~/.claude/skills/social-safe-zone
+git clone https://github.com/devherex/social-safe-zone ~/.claude/skills/social-safe-zone
 pip install -r ~/.claude/skills/social-safe-zone/requirements.txt
 ```
 **Claude.ai:** zip the folder (SKILL.md at the root) and upload it under Settings > Capabilities > Skills.
