@@ -1,0 +1,49 @@
+{
+  "preset": "ig-reel",
+  "elements": [
+    {
+      "id": "headline",
+      "type": "text",
+      "text": "STOP LOSING VIEWS",
+      "x": 60,
+      "y": 240,
+      "w": 960,
+      "h": 70,
+      "size": 83,
+      "color": "#38bdf8"
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "text": "Keep text inside the safe zone",
+      "x": 60,
+      "y": 1617,
+      "w": 830,
+      "h": 54,
+      "size": 48,
+      "color": "#ffffff"
+    },
+    {
+      "id": "cta-button",
+      "type": "box",
+      "text": "Book now",
+      "x": 640,
+      "y": 1260,
+      "w": 250,
+      "h": 110,
+      "size": 40,
+      "color": "#38bdf8"
+    },
+    {
+      "id": "logo",
+      "type": "box",
+      "text": "LOGO",
+      "x": 60,
+      "y": 1500,
+      "w": 220,
+      "h": 110,
+      "size": 40,
+      "color": "#94a3b8"
+    }
+  ]
+}
