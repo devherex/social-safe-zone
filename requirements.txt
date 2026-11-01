@@ -1,0 +1,3 @@
+Pillow>=10.1
+# optional: pytesseract (text detection, needs the tesseract binary)
+# optional: ffmpeg on PATH (video checks)

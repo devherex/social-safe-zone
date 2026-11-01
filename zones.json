@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-11-01",
+  "units": "px",
+  "note": "Single source of truth. Add or edit presets here and every script and template follows. 'safe' = free margin on each side. 'avoid' = extra no-go rectangles (x, y, w, h). 'confidence': chart = taken from official-style Instagram 2025 dimension charts, estimate = community-measured, verify before client work.",
+  "presets": {
+    "ig-reel": {
+      "label": "Instagram Reel",
+      "ui": "reel",
+      "width": 1080, "height": 1920,
+      "safe": { "top": 240, "bottom": 240, "left": 60, "right": 60 },
+      "avoid": [ { "label": "Action buttons", "x": 906, "y": 1172, "w": 174, "h": 508 } ],
+      "grid": { "width": 1080, "height": 1440 },
+      "confidence": "chart (top/bottom/buttons), estimate (side margins)"
+    },
+    "ig-story": {
+      "label": "Instagram Story",
+      "ui": "story",
+      "width": 1080, "height": 1920,
+      "safe": { "top": 155, "bottom": 155, "left": 60, "right": 60 },
+      "avoid": [],
+      "confidence": "chart (1080x1610 safe area), estimate (side margins)"
+    },
+    "ig-story-strict": {
+      "label": "Instagram Story (strict, extra room for reply bar)",
+      "ui": "story",
+      "width": 1080, "height": 1920,
+      "safe": { "top": 250, "bottom": 250, "left": 60, "right": 60 },
+      "avoid": [],
+      "confidence": "estimate"
+    },
+    "ig-feed": {
+      "label": "Instagram Feed Post (4:5)",
+      "ui": "feed",
+      "width": 1080, "height": 1350,
+      "safe": { "top": 54, "bottom": 54, "left": 34, "right": 34 },
+      "avoid": [],
+      "grid": { "width": 1012, "height": 1350 },
+      "confidence": "chart (grid 1012x1350), estimate (top/bottom margin)"
+    },
+    "tiktok": {
+      "label": "TikTok",
+      "ui": "tiktok",
+      "width": 1080, "height": 1920,
+      "safe": { "top": 130, "bottom": 480, "left": 60, "right": 120 },
+      "avoid": [],
+      "confidence": "estimate"
+    },
+    "yt-shorts": {
+      "label": "YouTube Shorts",
+      "ui": "tiktok",
+      "width": 1080, "height": 1920,
+      "safe": { "top": 160, "bottom": 420, "left": 60, "right": 140 },
+      "avoid": [],
+      "confidence": "estimate"
+    },
+    "linkedin-4x5": {
+      "label": "LinkedIn Video / Image (4:5)",
+      "ui": "feed",
+      "width": 1080, "height": 1350,
+      "safe": { "top": 60, "bottom": 60, "left": 60, "right": 60 },
+      "avoid": [],
+      "confidence": "estimate"
+    },
+    "linkedin-16x9": {
+      "label": "LinkedIn Video (16:9)",
+      "ui": "feed",
+      "width": 1920, "height": 1080,
+      "safe": { "top": 54, "bottom": 54, "left": 96, "right": 96 },
+      "avoid": [],
+      "confidence": "estimate"
+    }
+  }
+}
